@@ -1,0 +1,19 @@
+x-arcane:
+  icon: https://cdn.jsdelivr.net/gh/selfhst/icons@main/svg/owntone.svg
+  urls:
+    - https://owntone.github.io/owntone-server/
+services:
+  owntone:
+    image: docker.io/owntone/owntone:latest
+    container_name: OwnTone
+    network_mode: host
+    environment:
+      - UID=${UID}
+      - GID=${GID}
+    volumes:
+      - /mnt/dietpi_userdata/docker-data/owntone/etc:/etc/owntone
+      - /mnt/dietpi_userdata/Music:/srv/media
+      - /mnt/dietpi_userdata/docker-data/owntone/cache:/var/cache/owntone
+    restart: unless-stopped
+    labels:
+      com.getarcaneapp.arcane.icon: https://cdn.jsdelivr.net/gh/selfhst/icons@main/svg/owntone.svg
