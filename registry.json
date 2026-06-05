@@ -16,6 +16,17 @@
       "env_url": "https://raw.githubusercontent.com/JimBenna/arcane-templates/main/owntone/.env.example",
       "documentation_url": "https://owntone.github.io/owntone-server/getting-started/",
       "tags": ["media", "server"]
+    },
+        {
+      "id": "JB_Forgejo_and_Postgresql",
+      "name": "Forgejo",
+      "description": "Beyond coding. We forge.",
+      "version": "15",
+      "author": "Codeberg Team",
+      "compose_url": "https://raw.githubusercontent.com/JimBenna/arcane-templates/main/forgejo/docker-compose.yml",
+      "env_url": "https://raw.githubusercontent.com/JimBenna/arcane-templates/main/forgejo/.env.example",
+      "documentation_url": "https://forgejo.org/docs/latest/",
+      "tags": ["coding", "server", "git"]
     }
   ]
 }

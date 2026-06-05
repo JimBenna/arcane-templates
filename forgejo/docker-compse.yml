@@ -1,0 +1,57 @@
+x-arcane:
+  icon: https://cdn.jsdelivr.net/gh/selfhst/icons@main/svg/forgejo.svg
+  urls:
+    - https://forgejo.org/
+services:
+  forgejo:
+    image: codeberg.org/forgejo/forgejo:15
+    container_name: forgejo
+    environment:
+      - USER_UID=987
+      - USER_GID=989
+      - FORGEJO__database__DB_TYPE=postgres
+      - FORGEJO__database__HOST=forgejo-db:5432
+      - FORGEJO__database__NAME=${FORGEJO_DB_NAME}
+      - FORGEJO__database__USER=${FORGEJO_DB_USERNAME}
+      - FORGEJO__database__PASSWD=${FORGEJO_DB_PASSWORD}
+    restart: unless-stopped
+    networks:
+      forgejo_ext_net:
+        gw_priority: 1
+      forgejo_db_net:
+        gw_priority: 0
+    volumes:
+      - ${FORGEJO_VOLUME_PATH}/forgejoApp/forgejo:/data
+      - ${FORGEJO_VOLUME_PATH}forgejoApp/certs:/etc/forgejo/certs:ro
+      - /etc/localtime:/etc/localtime:ro
+    ports:
+      - '3000:3000'
+      - '222:22'
+    depends_on:
+      - forgejo-db
+    labels:
+      com.getarcaneapp.arcane.icon: https://cdn.jsdelivr.net/gh/selfhst/icons@main/svg/forgejo.svg
+  forgejo-db:
+    image: postgres:14
+    container_name: postgres
+    volumes:
+      - ${FORGEJO_VOLUME_PATH}/forgejoApp/postgres:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_USER=${FORGEJO_DB_USERNAME}
+      - POSTGRES_PASSWORD=${FORGEJO_DB_PASSWORD}
+      - POSTGRES_DB=${FORGEJO_DB_NAME}
+    restart: unless-stopped
+    networks:
+      forgejo_db_net:
+        gw_priority: 0
+    labels:
+      com.getarcaneapp.arcane.icon: https://cdn.jsdelivr.net/gh/selfhst/icons@main/svg/postgresql.svg
+networks:
+  forgejo_ext_net:
+    name: forgejo_ext_network
+    driver: bridge
+  forgejo_db_net:
+    external: false
+    ipam:
+      config:
+        - subnet: 192.168.254.0/29
