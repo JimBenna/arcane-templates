@@ -22,7 +22,7 @@ services:
         gw_priority: 0
     volumes:
       - ${FORGEJO_VOLUME_PATH}/forgejoApp/forgejo:/data
-      - ${FORGEJO_VOLUME_PATH}forgejoApp/certs:/etc/forgejo/certs:ro
+      - ${FORGEJO_VOLUME_PATH}/forgejoApp/certs:/etc/forgejo/certs:ro
       - /etc/localtime:/etc/localtime:ro
     ports:
       - '3000:3000'
