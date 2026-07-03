@@ -1,0 +1,44 @@
+x-arcane:
+  icon: https://cdn.jsdelivr.net/gh/selfhst/icons@main/svg/arcane.svg
+  urls:
+    - https://getarcane.app
+services:
+  arcane:
+    image: ghcr.io/getarcaneapp/arcane:latest
+    container_name: arcane
+    restart: unless-stopped
+    ports:
+      - 3552:3552
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - /mnt/dietpi_userdata/docker-data/arcane:/app/data
+      - /mnt/dietpi_userdata/docker-data/projects:/app/data/projects
+      - Backup:/backups
+    environment:
+      - APP_URL=${APPLICATIONURL}
+      - PUID=${UID}
+      - PGID=${GID}
+      - TZ=${TIMEZONE}
+      - LOG_LEVEL=info
+      - LOG_JSON=false
+      - ENCRYPTION_KEY=${KEY}
+      - JWT_SECRET=${SECRET}
+      - OIDC_ENABLED=false
+      - DATABASE_URL=file:data/arcane.db?_pragma=journal_mode(WAL)&_pragma=busy_timeout(2500)&_txlock=immediate
+      - PROJECTS_DIRECTORY=/app/data/projects
+    networks:
+      - arcane_br
+    labels:
+      com.getarcaneapp.arcane.icon: https://cdn.jsdelivr.net/gh/selfhst/icons@main/svg/arcane.svg
+networks:
+  arcane_br:
+   name: arcane_bridge
+   driver: bridge
+volumes:
+  Backup:
+    name: Backup
+#    driver: local
+#    driver_opts:
+#      type: cifs
+#      device: "//${SMBSRV}/${SMBSHARE}"
+#      o: "username=${MNTUSER},password=${MNTPWD},vers=3.1.1,file_mode=0755,dir_mode=0755,iocharset=utf8"
