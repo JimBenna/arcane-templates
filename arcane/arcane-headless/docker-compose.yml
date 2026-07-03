@@ -1,0 +1,40 @@
+x-arcane:
+  icon: https://cdn.jsdelivr.net/gh/selfhst/icons@main/svg/arcane.svg
+  urls:
+    - https://getarcane.app
+services:
+  arcane-agent:
+    image: ghcr.io/getarcaneapp/arcane-headless:latest
+    container_name: arcane-agent
+    restart: unless-stopped
+    environment:
+      - PUID=${UID}
+      - PGID=${GID}
+      - TZ=${TIMEZONE}
+      - AGENT_MODE=true
+      - EDGE_TRANSPORT=poll
+      - AGENT_TOKEN=${ARC_TOKEN}
+      - MANAGER_API_URL=${APPLICATIONURL}
+    ports:
+      - "3553:3553"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - backup:/backups
+      - arcane-data:/app/data
+    networks:
+      - arcane_br
+    labels:
+      com.getarcaneapp.arcane.icon: https://cdn.jsdelivr.net/gh/selfhst/icons@main/svg/arcane.svg
+networks:
+  arcane_br:
+   name: arcane_bridge
+   driver: bridge
+volumes:
+  arcane-data:
+  Backup:
+    name: backup
+#    driver: local
+#    driver_opts:
+#      type: cifs
+#      device: "//${SMBSRV}/${SMBSHARE}"
+#      o: "username=${MNTUSER},password=${MNTPWD},vers=3.1.1,file_mode=0755,dir_mode=0755,iocharset=utf8"
