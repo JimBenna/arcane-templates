@@ -1,4 +1,5 @@
 **This Arcance Template enables the deployment of FORGEJO and POSTRESQL services in the same container.**
+
 ➡️ It contains 2 separated networks : 
 - public subnet 
 - private subnet to grant access only to the database from the app itself, and this subnet is flagged as private thus the db port can't be accessed outside of the container
