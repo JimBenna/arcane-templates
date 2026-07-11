@@ -9,7 +9,7 @@
     {
       "id": "JB-Owntone-docker",
       "name": "Owntone",
-      "description": "OwnTone is an open source (audio) media server for GNU/Linux, FreeBSD and macOS.",
+      "description": "Open source (audio) media server for GNU/Linux, FreeBSD and macOS.",
       "version": "29.2",
       "author": "ejurgensen",
       "compose_url": "https://raw.githubusercontent.com/JimBenna/arcane-templates/main/owntone/docker-compose.yml",
