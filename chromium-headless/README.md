@@ -1,1 +1,3 @@
-This container is intended to be used with OpenClaw
+This container is intended to deploy a non-human interaction browser that will be used with OpenClaw, or any other AI tools that requires a browser access.
+it relies on ZENIKA container, so keep in mind that the container image pulls container from their European repository, you may have to use a mirror closest to you.
+Have a look to their docker hub page for further details : [ZENIKA/alpine-chrome](https://hub.docker.com/r/zenika/alpine-chrome)

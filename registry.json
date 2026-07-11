@@ -39,6 +39,17 @@
       "documentation_url": "https://getarcane.app/docs",
       "tags": ["container", "server", "docker"]
     },
+            {
+      "id": "JB-Chromium-Headless",
+      "name": "Chromium in a Container",
+      "description": "Chromium without Human interaction",
+      "version": "2.4.0",
+      "author": "Chromium Team",
+      "compose_url": "https://raw.githubusercontent.com/JimBenna/arcane-templates/main/chromium-headless/docker-compose.yml",
+      "env_url": "https://raw.githubusercontent.com/JimBenna/arcane-templates/main/chromium-headless/.env.example",
+      "documentation_url": "https://www.chromium.org/Home/",
+      "tags": ["browser", "AI", "docker"]
+    },    
         {
       "id": "JB-Forgejo-and-Postgresql",
       "name": "Forgejo",
