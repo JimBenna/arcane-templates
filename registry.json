@@ -2,7 +2,7 @@
   "$schema": "https://registry.getarcane.app/registry.json",
   "name": "Jim BENNA's ArcaneAPP Templates Registry on github",
   "description": "This is my own registry of docker-compose files to be used with Arcane-app. Enabling me to share this easily outside of my LAN",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "author": "Jim BENNA",
   "url": "https://github.com/JimBenna/arcane-templates",
   "templates": [
@@ -17,7 +17,7 @@
       "documentation_url": "https://owntone.github.io/owntone-server/getting-started/",
       "tags": ["media", "server"]
     },
-        {
+    {
       "id": "JB-Arcane-Server",
       "name": "Arcane Server",
       "description": "Arcane Server to manage containers",
@@ -28,7 +28,7 @@
       "documentation_url": "https://getarcane.app/docs",
       "tags": ["container", "server", "docker"]
     },
-            {
+    {
       "id": "JB-Arcane-Headless",
       "name": "Arcane Headless",
       "description": "Arcane client to manage locally installed containers. This version have to be linked to the server with a special token generated on the server",
@@ -39,7 +39,7 @@
       "documentation_url": "https://getarcane.app/docs",
       "tags": ["container", "server", "docker"]
     },
-            {
+    {
       "id": "JB-Chromium-Headless",
       "name": "Chromium in a Container",
       "description": "Chromium without Human interaction",
@@ -50,7 +50,7 @@
       "documentation_url": "https://www.chromium.org/Home/",
       "tags": ["browser", "AI", "docker"]
     },    
-        {
+    {
       "id": "JB-Forgejo-and-Postgresql",
       "name": "Forgejo",
       "description": "Beyond coding. We forge.",
