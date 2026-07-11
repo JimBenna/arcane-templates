@@ -4,8 +4,8 @@
 - public subnet 
 - private subnet to grant access only to the database from the app itself, and this subnet is flagged as private thus the db port can't be accessed outside of the container
 
-➡️ It also defines the right SVG icons automatically pulled from selfhst
+➡️ It also defines the right SVG icons automatically pulled from ([selfh.st](https://selfh.st/icons/)).
 
-➡️ Both services have healthchecks defined and operationals
+➡️ Both services have healthchecks defined and fully operationals.
 
 ➡️ If listening ports are not correctly defined in environment variables, default values are used.
