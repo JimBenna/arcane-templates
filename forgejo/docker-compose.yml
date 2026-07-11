@@ -60,7 +60,15 @@ services:
       - POSTGRES_USER=${FORGEJO_DB_USERNAME}
       - POSTGRES_PASSWORD=${FORGEJO_DB_PASSWORD}
       - POSTGRES_DB=${FORGEJO_DB_NAME}
+      - POSTGRES_DB_LISTENING_PORT=${POSTGRES_DB_PORT:-5432}
     restart: unless-stopped
+    healthcheck:
+      test: ["CMD-SHELL", "/usr/bin/pg_isready -U ${FORGEJO_DB_USERNAME} -h localhost -p ${POSTGRES_DB_PORT} -t 0 -q || exit 1"]
+      start_period: 1m
+      start_interval: 3s
+      interval: 15s
+      timeout: 5s
+      retries: 3
     networks:
       forgejo_db_net:
         gw_priority: 0
