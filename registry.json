@@ -31,7 +31,7 @@
             {
       "id": "JB-Arcane-Headless",
       "name": "Arcane Headless",
-      "description": "Arcane Server to manage containers",
+      "description": "Arcane client to manage locally installed containers. This version have to be linked to the server with a special token generated on the server",
       "version": "2.4.0",
       "author": "Arcane Team",
       "compose_url": "https://raw.githubusercontent.com/JimBenna/arcane-templates/main/arcane-headless/docker-compose.yml",
@@ -43,7 +43,7 @@
       "id": "JB-Chromium-Headless",
       "name": "Chromium in a Container",
       "description": "Chromium without Human interaction",
-      "version": "2.4.0",
+      "version": "89",
       "author": "Chromium Team",
       "compose_url": "https://raw.githubusercontent.com/JimBenna/arcane-templates/main/chromium-headless/docker-compose.yml",
       "env_url": "https://raw.githubusercontent.com/JimBenna/arcane-templates/main/chromium-headless/.env.example",
