@@ -14,7 +14,6 @@ services:
       - FORGEJO__database__USER=${FORGEJO_DB_USERNAME}
       - FORGEJO__database__PASSWD=${FORGEJO_DB_PASSWORD}
     restart: unless-stopped
-#    user: ${UID}:${GID}
     networks:
       forgejo_ext_net:
         gw_priority: 1
