@@ -1,5 +1,5 @@
 {
-  "$schema": "https://github.com/getarcaneapp/arcane-templates/schema.json",
+  "$schema": "https://registry.getarcane.app/registry.json",
   "name": "Jim BENNA's Arcane-APP Templates",
   "description": "This is my own docker-compose files that are managed by Arcane-app",
   "version": "0.0.1",
@@ -7,7 +7,7 @@
   "url": "https://github.com/JimBenna/arcane-templates",
   "templates": [
     {
-      "id": "JB_Owntone_docker",
+      "id": "JB-Owntone-docker",
       "name": "Owntone",
       "description": "OwnTone is an open source (audio) media server for GNU/Linux, FreeBSD and macOS.",
       "version": "29.2",
@@ -18,7 +18,29 @@
       "tags": ["media", "server"]
     },
         {
-      "id": "JB_Forgejo_and_Postgresql",
+      "id": "JB-Arcane-Server",
+      "name": "Arcane Server",
+      "description": "Arcane Server to manage containers",
+      "version": "2.4.0",
+      "author": "Arcane Team",
+      "compose_url": "https://raw.githubusercontent.com/JimBenna/arcane-templates/main/arcane-srv/docker-compose.yml",
+      "env_url": "https://raw.githubusercontent.com/JimBenna/arcane-templates/main/arcane-srv/.env.example",
+      "documentation_url": "https://getarcane.app/docs",
+      "tags": ["container", "server", "docker"]
+    },
+            {
+      "id": "JB-Arcane-Headless",
+      "name": "Arcane Server",
+      "description": "Arcane Server to manage containers",
+      "version": "2.4.0",
+      "author": "Arcane Team",
+      "compose_url": "https://raw.githubusercontent.com/JimBenna/arcane-templates/main/arcane-headless/docker-compose.yml",
+      "env_url": "https://raw.githubusercontent.com/JimBenna/arcane-templates/main/arcane-headless/.env.example",
+      "documentation_url": "https://getarcane.app/docs",
+      "tags": ["container", "server", "docker"]
+    },
+        {
+      "id": "JB-Forgejo-and-Postgresql",
       "name": "Forgejo",
       "description": "Beyond coding. We forge.",
       "version": "15",
