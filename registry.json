@@ -30,7 +30,7 @@
     },
             {
       "id": "JB-Arcane-Headless",
-      "name": "Arcane Server",
+      "name": "Arcane Headless",
       "description": "Arcane Server to manage containers",
       "version": "2.4.0",
       "author": "Arcane Team",
