@@ -1,0 +1,1 @@
+This template is used to deploy a MPD server called owntone in a container.
