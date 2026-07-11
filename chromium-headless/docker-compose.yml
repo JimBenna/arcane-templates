@@ -1,0 +1,38 @@
+x-arcane:
+  icon: https://cdn.jsdelivr.net/gh/selfhst/icons@main/svg/chromium.svg
+  urls:
+    - https://chromium.org/
+services:
+  chromium:
+    image: eu.gcr.io/zenika-hub/alpine-chrome:latest
+    container_name: Chromium-headless
+    user: ${UID}:${GID}
+    environment:
+      - TZ=${TIMEZONE}
+    volumes:
+      - chromium_data:/data
+    command:  " --no-sandbox --disable-gpu --disable-software-rasterizer --disable-dev-shm-usage -remote-debugging-address=0.0.0.0 --remote-debugging-port=9222 --user-data-dir=/data"
+    ports:
+      - 9222:9222
+    restart: unless-stopped
+    networks:
+      - chromium_public_network
+      - openclaw_private_subnet
+    tmpfs:
+      - /tmp
+    labels:
+      com.getarcaneapp.arcane.icon: https://cdn.jsdelivr.net/gh/selfhst/icons@main/svg/chromium.svg
+networks: 
+  openclaw_private_subnet:
+    name: openclaw_private_net
+    internal: true
+    ipam:
+      driver: default
+      config:
+        - subnet: 192.168.250.0/29 
+  chromium_public_network:
+    name: chromium_public_net  
+    driver: bridge
+volumes:
+  chromium_data:
+    name: chromium_data
