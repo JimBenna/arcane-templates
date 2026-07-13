@@ -25,8 +25,8 @@ services:
       timeout: 10s
       retries: 3  
     labels:
-      - com.getarcaneapp.arcane.icon: https://cdn.jsdelivr.net/gh/selfhst/icons@main/png/myspeed.png
-      - "autoheal=true"
+      com.getarcaneapp.arcane.icon: https://cdn.jsdelivr.net/gh/selfhst/icons@main/png/myspeed.png
+      "autoheal=true"
 # The auto-healer watches other containers and restarts unhealthy ones
   autoheal:
     image: willfarrell/autoheal:latest
