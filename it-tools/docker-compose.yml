@@ -1,0 +1,19 @@
+x-arcane:
+  icon: https://cdn.jsdelivr.net/gh/selfhst/icons@main/svg/it-tools.svg
+  urls:
+    - https://it-tools.tech/
+services:
+    it-tools:
+        image: ghcr.io/corentinth/it-tools:latest
+        container_name: it-tools
+        ports:
+            - 8080:80
+        restart: unless-stopped
+        networks:
+        - ittools
+    labels:
+      com.getarcaneapp.arcane.icon: https://cdn.jsdelivr.net/gh/selfhst/icons@main/svg/forgejo.svg
+networks:
+  ittools:
+   name: ittools_bridge
+   driver: bridge
