@@ -15,9 +15,9 @@ services:
             - myspeed
         healthcheck:
             test: |
-               sh -c 'ps aux | grep -q "node server" && 
-               wget -q -O- http://localhost:${HOST_LISTENING_PORT} > /dev/null && 
-               echo "Myspeed App is healthy" || exit 1'
+              sh -c 'ps aux | grep -q "node server" && 
+                      wget -q -O- http://localhost:${HOST_LISTENING_PORT} > /dev/null && 
+                      echo "Myspeed App is healthy" || exit 1'
             start_period: 15s
             start_interval: 5s
             interval: 30s
