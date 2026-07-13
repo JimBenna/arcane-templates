@@ -25,7 +25,20 @@ services:
       timeout: 10s
       retries: 3  
     labels:
-        com.getarcaneapp.arcane.icon: https://cdn.jsdelivr.net/gh/selfhst/icons@main/png/myspeed.png       
+      - com.getarcaneapp.arcane.icon: https://cdn.jsdelivr.net/gh/selfhst/icons@main/png/myspeed.png
+      - "autoheal=true"
+# The auto-healer watches other containers and restarts unhealthy ones
+  autoheal:
+    image: willfarrell/autoheal:latest
+    restart: always
+    environment:
+      AUTOHEAL_CONTAINER_LABEL: "autoheal"
+      AUTOHEAL_INTERVAL: 30
+      AUTOHEAL_START_PERIOD: 60
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    labels:
+      - com.getarcaneapp.arcane.icon: https://artoflivingretreatcenter.org/wp-content/uploads/hope_icon.svg       
 networks:
   myspeed:
    name: myspeed_bridge
