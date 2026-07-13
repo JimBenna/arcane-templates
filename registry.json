@@ -84,6 +84,17 @@
       "tags": ["IT", "tools"]
     },
     {
+      "id": "JB-AutoHealing-Container",
+      "name": "AutoHealing.",
+      "description": "Application that monitors containers with healthcheks and restart container in case of failure",
+      "version": "0.1.0",
+      "author": "Jim BENNA",
+      "compose_url": "https://raw.githubusercontent.com/JimBenna/arcane-templates/main/autoheal/docker-compose.yml",
+      "env_url": "https://raw.githubusercontent.com/JimBenna/arcane-templates/main/autoheal/.env.example",
+      "documentation_url": "https://github.com/willfarrell/docker-autoheal/",
+      "tags": ["container", "tools"]
+    },
+    {
       "id": "JB-IT-tools-Container",
       "name": "IT Tools",
       "description": "Some IT useful tools selfhosted in a container ",
