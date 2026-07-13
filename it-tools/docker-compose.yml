@@ -18,6 +18,7 @@ services:
           retries: 3
         labels:
           com.getarcaneapp.arcane.icon: https://cdn.jsdelivr.net/gh/selfhst/icons@main/svg/it-tools.svg
+          autoheal-app: true
 networks:
   ittools:
    name: ittools_bridge
