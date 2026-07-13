@@ -8,15 +8,15 @@ services:
         container_name: MySpeed
 #        user: ${UID}:${GUID}
         ports:
-            - ${HOST_LISTENING_PORT}:5216
+            - ${LISTENING_PORT}:5216
         volumes:
             - myspeed:/myspeed/data
         networks:
             - myspeed
         healthcheck:
             test: |
-              sh -c 'ps aux | grep -q "node server" && 
-                      wget -q -O- http://localhost:${HOST_LISTENING_PORT} > /dev/null && 
+              sh -c 'ps aux | grep -q "[n]ode server" && 
+                      wget -q -O- http://localhost:${LISTENING_PORT} > /dev/null && 
                       echo "Myspeed App is healthy" || exit 1'
             start_period: 15s
             start_interval: 5s
@@ -24,8 +24,7 @@ services:
             timeout: 10s
             retries: 3  
         labels:
-            com.getarcaneapp.arcane.icon: https://cdn.jsdelivr.net/gh/selfhst/icons@main/png/myspeed.png
-        
+            com.getarcaneapp.arcane.icon: https://cdn.jsdelivr.net/gh/selfhst/icons@main/png/myspeed.png       
 networks:
   myspeed:
    name: myspeed_bridge
