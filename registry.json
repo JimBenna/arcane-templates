@@ -75,7 +75,7 @@
     {
       "id": "JB-CyberChef-Container",
       "name": "CyberChef.",
-      "description": "This template is defined to deploy CyberChef in a container",
+      "description": "CyberChef tools selfhosted in a container",
       "version": "0.1.0",
       "author": "Jim BENNA",
       "compose_url": "https://raw.githubusercontent.com/JimBenna/arcane-templates/main/cyberchef/docker-compose.yml",
@@ -84,9 +84,9 @@
       "tags": ["IT", "tools"]
     },
     {
-      "id": "JB-IT-T00LS-Container",
+      "id": "JB-IT-tools-Container",
       "name": "IT Tools",
-      "description": "Selfhosted in a container IT useful tools",
+      "description": "Some IT useful tools selfhosted in a container ",
       "version": "0.1.0",
       "author": "Jim BENNA",
       "compose_url": "https://raw.githubusercontent.com/JimBenna/arcane-templates/main/it-tools/docker-compose.yml",
@@ -97,7 +97,7 @@
     {
       "id": "JB-Forgejo-and-Postgresql",
       "name": "Forgejo, Forgejo Runner and Docker-in-Docker",
-      "description": "Beyond coding. We forge.",
+      "description": "A Selfhosted GIT server",
       "version": "1.0.0",
       "author": "Jim BENNA",
       "compose_url": "https://raw.githubusercontent.com/JimBenna/arcane-templates/main/forgejo/docker-compose.yml",
