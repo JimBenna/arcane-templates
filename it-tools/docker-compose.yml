@@ -12,7 +12,7 @@ services:
         networks:
         - ittools
         labels:
-          com.getarcaneapp.arcane.icon: https://cdn.jsdelivr.net/gh/selfhst/icons@main/svg/forgejo.svg
+          com.getarcaneapp.arcane.icon: https://cdn.jsdelivr.net/gh/selfhst/icons@main/svg/it-tools.svg
 networks:
   ittools:
    name: ittools_bridge
