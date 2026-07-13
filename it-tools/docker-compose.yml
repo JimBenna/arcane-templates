@@ -7,10 +7,15 @@ services:
         image: ghcr.io/corentinth/it-tools:latest
         container_name: it-tools
         ports:
-            - 8080:80
+            - 8081:80
         restart: unless-stopped
         networks:
         - ittools
+        healthcheck:
+          test: ["CMD", "curl", "-f", "http://localhost"]
+          interval: 30s
+          timeout: 10s
+          retries: 3
         labels:
           com.getarcaneapp.arcane.icon: https://cdn.jsdelivr.net/gh/selfhst/icons@main/svg/it-tools.svg
 networks:
