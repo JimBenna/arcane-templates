@@ -37,7 +37,8 @@ services:
       AUTOHEAL_START_PERIOD: 60
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
-     
+    labels:
+      com.getarcaneapp.arcane.icon: https://cdn.jsdelivr.net/gh/selfhst/icons@main/png/fitbit-health-dashboard.png
 networks:
   myspeed:
    name: myspeed_bridge
