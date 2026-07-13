@@ -6,7 +6,7 @@ services:
     MySpeed:
         image: germannewsmaker/myspeed
         container_name: MySpeed
-        user: ${UID}:${GUID}
+#        user: ${UID}:${GUID}
         ports:
             - 5216:5216
         volumes:
