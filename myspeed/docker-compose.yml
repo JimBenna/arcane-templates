@@ -16,7 +16,7 @@ services:
         - myspeed
     healthcheck:
       test: |
-        sh -c 'ps aux | grep -q ""[n]ode server" && 
+        sh -c 'ps aux | grep -q "[n]ode server" && 
                wget -q -O- http://localhost:5216 > /dev/null && 
                echo "Myspeed is healthy" || exit 1'
       start_period: 15s
