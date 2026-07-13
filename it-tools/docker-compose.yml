@@ -11,8 +11,8 @@ services:
         restart: unless-stopped
         networks:
         - ittools
-    labels:
-      com.getarcaneapp.arcane.icon: https://cdn.jsdelivr.net/gh/selfhst/icons@main/svg/forgejo.svg
+        labels:
+          com.getarcaneapp.arcane.icon: https://cdn.jsdelivr.net/gh/selfhst/icons@main/svg/forgejo.svg
 networks:
   ittools:
    name: ittools_bridge
