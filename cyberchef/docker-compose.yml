@@ -1,0 +1,26 @@
+x-arcane:
+  icon: https://cdn.jsdelivr.net/gh/selfhst/icons@main/svg/cyberchef.svg
+  urls:
+    - https://gchq.github.io/CyberChef/
+services:
+services:
+    cyberchef:
+        image: ghcr.io/gchq/cyberchef:latest
+        ports:
+            - 8082:8080
+        stdin_open: true
+        tty: true
+        restart: unless-stopped
+        networks:
+        - cyberchef
+        healthcheck:
+          test: ["CMD", "curl", "-f", "http://localhost:8080"]
+          interval: 30s
+          timeout: 10s
+          retries: 3
+        labels:
+          com.getarcaneapp.arcane.icon: https://cdn.jsdelivr.net/gh/selfhst/icons@main/svg/cyberchef.svg
+networks:
+  cyberchef:
+   name: cyberchef_bridge
+   driver: bridge
