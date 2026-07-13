@@ -9,7 +9,7 @@ services:
 #    user: ${UID}:${GUID}
     restart: unless-stopped
     ports:
-      - ${EXTERNAL_LISTEN_PORT}:${INTERNAL_LISTEN_PORT}
+      - 8080:5216
     volumes:
       - myspeed:/myspeed/data
     networks:
@@ -17,7 +17,7 @@ services:
     healthcheck:
       test: |
         sh -c 'ps aux | grep -q "[n]ode server" && 
-               wget --spider -q -O- http://localhost:${INTERNAL_LISTEN_PORT} > /dev/null && 
+               wget --spider -q -O- http://localhost:5216 > /dev/null && 
                echo "Myspeed is healthy" || exit 1'
       start_period: 15s
       start_interval: 5s
