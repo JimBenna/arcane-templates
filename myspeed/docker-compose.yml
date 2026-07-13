@@ -1,0 +1,25 @@
+x-arcane:
+  icon: https://cdn.jsdelivr.net/gh/selfhst/icons@main/png/myspeed.png
+  urls:
+    - https://myspeed.dev/
+services:
+    MySpeed:
+        image: germannewsmaker/myspeed
+        container_name: MySpeed
+        user: ${UID}:${GUID}
+        ports:
+            - 5216:5216
+        volumes:
+            - myspeed:/myspeed/data
+        networks:
+            - myspeed
+        labels:
+            com.getarcaneapp.arcane.icon: https://cdn.jsdelivr.net/gh/selfhst/icons@main/png/myspeed.png
+        
+networks:
+  myspeed:
+   name: myspeed_bridge
+   driver: bridge
+volumes:
+  myspeed:
+    name: Myspeed_Volume

@@ -60,7 +60,18 @@
       "env_url": "https://raw.githubusercontent.com/JimBenna/arcane-templates/main/ollama/.env.example",
       "documentation_url": "https://docs.ollama.com",
       "tags": ["server", "AI", "WebUI"]
-    },    
+    }, 
+            {
+      "id": "JB-MySpeed-Container",
+      "name": "MySpeed in the same container",
+      "description": "This template is defined to deploy myspeed in a container",
+      "version": "0.1.0",
+      "author": "Jim BENNA",
+      "compose_url": "https://raw.githubusercontent.com/JimBenna/arcane-templates/main/myspeed/docker-compose.yml",
+      "env_url": "https://raw.githubusercontent.com/JimBenna/arcane-templates/main/myspeed/.env.example",
+      "documentation_url": "https://myspeed.dev/",
+      "tags": ["server", "bandwidth"]
+    },   
     {
       "id": "JB-Forgejo-and-Postgresql",
       "name": "Forgejo",
