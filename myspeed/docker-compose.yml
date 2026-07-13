@@ -9,7 +9,7 @@ services:
 #    user: ${UID}:${GUID}
     restart: unless-stopped
     ports:
-      - ${LISTENING_PORT}:5216
+      - $LISTENING_PORT:5216
     volumes:
       - myspeed:/myspeed/data
     networks:
