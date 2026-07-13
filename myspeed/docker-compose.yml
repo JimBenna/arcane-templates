@@ -3,28 +3,29 @@ x-arcane:
   urls:
     - https://myspeed.dev/
 services:
-    MySpeed:
-        image: germannewsmaker/myspeed
-        container_name: MySpeed
-#        user: ${UID}:${GUID}
-        ports:
-            - ${LISTENING_PORT}:5216
-        volumes:
-            - myspeed:/myspeed/data
-        networks:
-            - myspeed
-        healthcheck:
-            test: |
-              sh -c 'ps aux | grep -q "[n]ode server" && 
-                      wget -q -O- http://localhost:${LISTENING_PORT} > /dev/null && 
-                      echo "Myspeed App is healthy" || exit 1'
-            start_period: 15s
-            start_interval: 5s
-            interval: 30s
-            timeout: 10s
-            retries: 3  
-        labels:
-            com.getarcaneapp.arcane.icon: https://cdn.jsdelivr.net/gh/selfhst/icons@main/png/myspeed.png       
+  MySpeed:
+    image: germannewsmaker/myspeed
+    container_name: MySpeed
+#    user: ${UID}:${GUID}
+    restart: unless-stopped
+    ports:
+      - ${LISTENING_PORT}:5216
+    volumes:
+      - myspeed:/myspeed/data
+    networks:
+        - myspeed
+    healthcheck:
+      test: |
+        sh -c 'ps aux | grep -q ""[n]ode server" && 
+               wget -q -O- http://localhost:${LISTENING_PORT} > /dev/null && 
+               echo "Myspeed is healthy" || exit 1'
+      start_period: 15s
+      start_interval: 5s
+      interval: 30s
+      timeout: 10s
+      retries: 3  
+      labels:
+        com.getarcaneapp.arcane.icon: https://cdn.jsdelivr.net/gh/selfhst/icons@main/png/myspeed.png       
 networks:
   myspeed:
    name: myspeed_bridge
