@@ -20,7 +20,7 @@
     {
       "id": "JB-Arcane-Server",
       "name": "Arcane Server",
-      "description": "Arcane Server to manage containers with a runner and docker-in-docker",
+      "description": "Arcane Server to manage containers",
       "version": "2.4.0",
       "author": "Arcane Team",
       "compose_url": "https://raw.githubusercontent.com/JimBenna/arcane-templates/main/arcane-srv/docker-compose.yml",
