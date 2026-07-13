@@ -50,7 +50,7 @@
       "documentation_url": "https://www.chromium.org/Home/",
       "tags": ["browser", "AI", "docker"]
     },
-        {
+    {
       "id": "JB-Ollama-WebUI",
       "name": "Ollama and OpenWebUI in the same container",
       "description": "This template enables an easy deployment of ollama and OpenWebUI",
@@ -61,7 +61,7 @@
       "documentation_url": "https://docs.ollama.com",
       "tags": ["server", "AI", "WebUI"]
     }, 
-            {
+    {
       "id": "JB-MySpeed-Container",
       "name": "MySpeed in the same container",
       "description": "This template is defined to deploy myspeed in a container",
@@ -71,13 +71,35 @@
       "env_url": "https://raw.githubusercontent.com/JimBenna/arcane-templates/main/myspeed/.env.example",
       "documentation_url": "https://myspeed.dev/",
       "tags": ["server", "bandwidth"]
-    },   
+    },
+    {
+      "id": "JB-CyberChef-Container",
+      "name": "CyberChef.",
+      "description": "This template is defined to deploy CyberChef in a container",
+      "version": "0.1.0",
+      "author": "Jim BENNA",
+      "compose_url": "https://raw.githubusercontent.com/JimBenna/arcane-templates/main/cyberchef/docker-compose.yml",
+      "env_url": "https://raw.githubusercontent.com/JimBenna/arcane-templates/main/cyberchef/.env.example",
+      "documentation_url": "https://gchq.github.io/CyberChef/",
+      "tags": ["IT", "tools"]
+    },
+    {
+      "id": "JB-IT-T00LS-Container",
+      "name": "IT Tools",
+      "description": "Selfhosted in a container IT useful tools",
+      "version": "0.1.0",
+      "author": "Jim BENNA",
+      "compose_url": "https://raw.githubusercontent.com/JimBenna/arcane-templates/main/it-tools/docker-compose.yml",
+      "env_url": "https://raw.githubusercontent.com/JimBenna/arcane-templates/main/it-tools/.env.example",
+      "documentation_url": "https://it-tools.tech/",
+      "tags": ["IT", "tools"]
+    },     
     {
       "id": "JB-Forgejo-and-Postgresql",
-      "name": "Forgejo",
+      "name": "Forgejo, Forgejo Runner and Docker-in-Docker",
       "description": "Beyond coding. We forge.",
-      "version": "15",
-      "author": "Codeberg Team",
+      "version": "1.0.0",
+      "author": "Jim BENNA",
       "compose_url": "https://raw.githubusercontent.com/JimBenna/arcane-templates/main/forgejo/docker-compose.yml",
       "env_url": "https://raw.githubusercontent.com/JimBenna/arcane-templates/main/forgejo/.env.example",
       "documentation_url": "https://forgejo.org/docs/latest/",
