@@ -14,7 +14,9 @@ services:
         networks:
         - cyberchef
         healthcheck:
-          test: ["CMD", "curl", "-f", "http://localhost:8080"]
+          test: |
+            sh -c sh -c '/usr/bin/wget -q -O- http://localhost:8080 > /dev/null && 
+               echo "Runner healthy" || exit 1'
           interval: 30s
           timeout: 10s
           retries: 3
