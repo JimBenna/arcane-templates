@@ -5,6 +5,7 @@ x-arcane:
 services:
     cyberchef:
         image: ghcr.io/gchq/cyberchef:latest
+        container_name: cyberchef
         ports:
             - 8082:8080
         stdin_open: true
