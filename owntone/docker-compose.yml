@@ -10,10 +10,22 @@ services:
     environment:
       - UID=${UID}
       - GID=${GID}
+      - TZ=${TIMEZONE}
     volumes:
-      - /mnt/dietpi_userdata/docker-data/owntone/etc:/etc/owntone
-      - /mnt/dietpi_userdata/Music:/srv/media
-      - /mnt/dietpi_userdata/docker-data/owntone/cache:/var/cache/owntone
+      - owntone:/etc/owntone
+      - media:/srv/media:ro
+    tmpfs:
+      - /var/cache/owntone:rw,size=512m,mode=1777,noexec,nodev,nosuid
     restart: unless-stopped
     labels:
       com.getarcaneapp.arcane.icon: https://cdn.jsdelivr.net/gh/selfhst/icons@main/svg/owntone.svg
+volumes:
+  owntone:
+    name: owntone
+  media:
+    name: Musique
+    driver: local
+    driver_opts:
+      type: cifs
+      device: "//${SMBSRV}/${SMBSHARE}"
+      o: "username=${MNTUSER},password=${MNTPWD},ro,vers=3.1.1,file_mode=0755,dir_mode=0755,iocharset=utf8"
