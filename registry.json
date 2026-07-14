@@ -1,6 +1,6 @@
 {
   "$schema": "https://registry.getarcane.app/registry.json",
-  "name": "Jim BENNA's ArcaneAPP Templates Registry on github",
+  "name": "Jim BENNA's Arcane Templates",
   "description": "This is my own registry of docker-compose files to be used with Arcane-app. Enabling me to share this easily outside of my LAN",
   "version": "0.0.2",
   "author": "Jim BENNA",
