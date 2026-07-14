@@ -22,7 +22,6 @@ services:
       - 5900:5900/udp
     volumes:
       - macos:/storage
-    restart: always
     stop_grace_period: 2m
     restart: unless-stopped
     labels:
