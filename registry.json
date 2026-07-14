@@ -64,8 +64,8 @@
     }, 
     {
       "id": "JB-MySpeed-Container",
-      "name": "MySpeed in the same container",
-      "description": "This template is defined to deploy myspeed in a container",
+      "name": "MySpeed",
+      "description": "MySpeed selfhosted bandwidth measurment tool",
       "version": "0.1.0",
       "author": "Jim BENNA",
       "compose_url": "https://raw.githubusercontent.com/JimBenna/arcane-templates/main/myspeed/docker-compose.yml",
@@ -126,7 +126,7 @@
       "compose_url": "https://raw.githubusercontent.com/JimBenna/arcane-templates/main/samba/docker-compose.yml",
       "env_url": "https://raw.githubusercontent.com/JimBenna/arcane-templates/main/samba/.env.example",
       "documentation_url": "https://hub.docker.com/r/dockurr/samba",
-      "tags": ["IT", "Dev"]
+      "tags": ["IT"]
     },
     {
       "id": "JB-DockurMacOs-Container",
