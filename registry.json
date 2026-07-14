@@ -193,7 +193,18 @@
       "env_url": "https://raw.githubusercontent.com/JimBenna/arcane-templates/main/proxmoxve/.env.example",
       "documentation_url": "https://pve.proxmox.com/pve-docs/",
       "tags": ["IT", "Server"]
-    },                    
+    },
+    {
+      "id": "JB-WorldMonitor-Container",
+      "name": "WorldMonitor Application.",
+      "description": "Real-time global intelligence dashboard (Nor Ready Yet, don't deploy)",
+      "version": "0.1.0",
+      "author": "Jim BENNA",
+      "compose_url": "https://raw.githubusercontent.com/JimBenna/arcane-templates/main/worldmonitor/docker-compose.yml",
+      "env_url": "https://raw.githubusercontent.com/JimBenna/arcane-templates/main/worldmonitor/.env.example",
+      "documentation_url": "https://www.worldmonitor.app/#first-five",
+      "tags": ["Information", "Dashboard"]
+    },                             
     {
       "id": "JB-Forgejo-and-Postgresql",
       "name": "Forgejo its database, Forgejo Runner and Docker-in-Docker.",
