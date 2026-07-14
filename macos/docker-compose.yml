@@ -1,5 +1,5 @@
 x-arcane:
-  icon: https://github.com/dockur/macos/raw/master/.github/logo.png
+  icon: https://media.idownloadblog.com/wp-content/uploads/2025/06/Apple-macOS-Tahoe-Beta-2-Finder-Icon.jpg
   urls:
     - https://wikipedia.org/wiki/MacOS
 services:
@@ -26,7 +26,7 @@ services:
     stop_grace_period: 2m
     restart: unless-stopped
     labels:
-      com.getarcaneapp.arcane.icon: https://github.com/dockur/macos/raw/master/.github/logo.png
+      com.getarcaneapp.arcane.icon: https://media.idownloadblog.com/wp-content/uploads/2025/06/Apple-macOS-Tahoe-Beta-2-Finder-Icon.jpg
 volumes:
   macos:
     name: macos-volume

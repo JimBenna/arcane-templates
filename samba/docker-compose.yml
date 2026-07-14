@@ -1,5 +1,5 @@
 x-arcane:
-  icon: https://raw.githubusercontent.com/dockur/samba/master/.github/logo.png
+  icon: https://www.oschina.net/uploads/img/200901/22150830_bQkl.png
   urls:
     - https://www.samba.org
 services:
@@ -24,7 +24,7 @@ services:
     restart: always
     restart: unless-stopped
     labels:
-      com.getarcaneapp.arcane.icon: https://raw.githubusercontent.com/dockur/samba/master/.github/logo.png
+      com.getarcaneapp.arcane.icon: https://www.oschina.net/uploads/img/200901/22150830_bQkl.png
 volumes:
   samba:
     name: smb-volume
