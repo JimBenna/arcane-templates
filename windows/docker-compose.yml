@@ -1,0 +1,28 @@
+x-arcane:
+  icon: https://cdn.jsdelivr.net/gh/selfhst/icons@main/svg/microsoft-windows.svg
+  urls:
+    - https://en.wikipedia.org/wiki/Microsoft_Windows
+services:
+  windows:
+    image: dockurr/windows
+    container_name: windows
+    environment:
+      VERSION: "11"
+    devices:
+      - /dev/kvm
+      - /dev/net/tun
+    cap_add:
+      - NET_ADMIN
+    ports:
+      - 8006:8006
+      - 3389:3389/tcp
+      - 3389:3389/udp
+    volumes:
+      - windows:/storage
+    stop_grace_period: 2m
+    restart: unless-stopped
+    labels:
+      com.getarcaneapp.arcane.icon: https://cdn.jsdelivr.net/gh/selfhst/icons@main/svg/microsoft-windows.svg
+volumes:
+  windows:
+    name: windows-volume

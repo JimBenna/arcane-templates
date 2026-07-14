@@ -137,7 +137,18 @@
       "env_url": "https://raw.githubusercontent.com/JimBenna/arcane-templates/main/macos/.env.example",
       "documentation_url": "https://hub.docker.com/r/dockurr/macos",
       "tags": ["IT", "OS"]
-    },          
+    },
+    {
+      "id": "JB-DockurWindows-Container",
+      "name": "Windows",
+      "description": "windows workstation in a container.",
+      "version": "0.1.0",
+      "author": "Jim BENNA",
+      "compose_url": "https://raw.githubusercontent.com/JimBenna/arcane-templates/main/windows/docker-compose.yml",
+      "env_url": "https://raw.githubusercontent.com/JimBenna/arcane-templates/main/windows/.env.example",
+      "documentation_url": "https://hub.docker.com/r/dockurr/windows",
+      "tags": ["IT", "OS"]
+    },              
     {
       "id": "JB-Forgejo-and-Postgresql",
       "name": "Forgejo, Forgejo Runner and Docker-in-Docker",
