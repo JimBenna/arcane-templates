@@ -4,6 +4,9 @@ The impressive list of implemented features is listed in its github page : [Ownt
 
 But here is a short list of those features :
 - Stream to  AirPlay (synchronized multiroom) and  Chromecast devices
-- Spotify support
-- Remote App control (native IOS apple remote app)
+- Spotify support,
+- Remote App control (native IOS apple remote app),
+- Podcasts subscription and management
+- Internet Radio
+- [...] And many others things 🥰
   
