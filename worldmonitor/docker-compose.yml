@@ -1,3 +1,7 @@
+x-arcane:
+  icon: https://cdn.jsdelivr.net/gh/selfhst/icons@main/svg/world-monitor.svg
+  urls:
+    - https://www.worldmonitor.app
 # =============================================================================
 # World Monitor — Docker / Podman Compose
 # =============================================================================
@@ -9,10 +13,7 @@
 #
 # The app will be available at http://localhost:3000
 # =============================================================================
-x-arcane:
-  icon: https://cdn.jsdelivr.net/gh/selfhst/icons@main/svg/world-monitor.svg
-  urls:
-    - https://www.worldmonitor.app
+
 services:
 
   worldmonitor:
