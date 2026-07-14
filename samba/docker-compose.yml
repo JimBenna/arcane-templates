@@ -1,5 +1,5 @@
 x-arcane:
-  icon: https://www.oschina.net/uploads/img/200901/22150830_bQkl.png
+  icon: https://en.wikipedia.org/wiki/Samba_(software)#/media/File:Samba_logo_2010.svg
   urls:
     - https://www.samba.org
 services:
@@ -24,7 +24,7 @@ services:
     restart: always
     restart: unless-stopped
     labels:
-      com.getarcaneapp.arcane.icon: https://www.oschina.net/uploads/img/200901/22150830_bQkl.png
+      com.getarcaneapp.arcane.icon: https://en.wikipedia.org/wiki/Samba_(software)#/media/File:Samba_logo_2010.svg
 volumes:
   samba:
     name: smb-volume
