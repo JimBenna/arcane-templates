@@ -21,7 +21,6 @@ services:
     volumes:
       - /etc/localtime:/etc/localtime:ro
       - samba:/storage
-    restart: always
     restart: unless-stopped
     labels:
       com.getarcaneapp.arcane.icon: https://upload.wikimedia.org/wikipedia/commons/d/db/Samba_logo_2010.svg
