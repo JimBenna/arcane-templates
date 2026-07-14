@@ -149,7 +149,18 @@
       "env_url": "https://raw.githubusercontent.com/JimBenna/arcane-templates/main/windows/.env.example",
       "documentation_url": "https://hub.docker.com/r/dockurr/windows",
       "tags": ["IT", "OS"]
-    }, 
+    },
+    {
+      "id": "JB-ChromeOSs-Container",
+      "name": "ChromeOS",
+      "description": "ChromeOS in a container.",
+      "version": "0.1.0",
+      "author": "Jim BENNA",
+      "compose_url": "https://raw.githubusercontent.com/JimBenna/arcane-templates/main/chromeos/docker-compose.yml",
+      "env_url": "https://raw.githubusercontent.com/JimBenna/arcane-templates/main/chromeos/.env.example",
+      "documentation_url": "https://github.com/forkymcforkface/chromeos",
+      "tags": ["IT", "OS"]
+    },  
     {
       "id": "JB-QEMU-Container",
       "name": "Qemu",
