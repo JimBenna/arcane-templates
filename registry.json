@@ -115,7 +115,18 @@
       "env_url": "https://raw.githubusercontent.com/JimBenna/arcane-templates/main/vscodium/.env.example",
       "documentation_url": "https://it-tools.tech/",
       "tags": ["IT", "Dev"]
-    },      
+    },
+    {
+      "id": "JB-DockurSmbServer-Container",
+      "name": "samba",
+      "description": "samba server in a container.",
+      "version": "0.1.0",
+      "author": "Jim BENNA",
+      "compose_url": "https://raw.githubusercontent.com/JimBenna/arcane-templates/main/samba/docker-compose.yml",
+      "env_url": "https://raw.githubusercontent.com/JimBenna/arcane-templates/main/samba/.env.example",
+      "documentation_url": "https://hub.docker.com/r/dockurr/samba",
+      "tags": ["IT", "Dev"]
+    },        
     {
       "id": "JB-Forgejo-and-Postgresql",
       "name": "Forgejo, Forgejo Runner and Docker-in-Docker",

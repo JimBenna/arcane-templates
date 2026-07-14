@@ -1,0 +1,30 @@
+x-arcane:
+  icon: https://raw.githubusercontent.com/dockur/samba/master/.github/logo.png
+  urls:
+    - https://www.samba.org
+services:
+  samba:
+    image: dockurr/samba
+    container_name: samba
+    environment:
+      NAME: ${SMBNAME}
+      USER: ${SMBUSER}
+      PASS: ${SMBPASS}
+    # Optional, default true
+      RW: true
+    # Optional, default 1000
+      UID: ${UID}
+    # Optional, default 1000
+      GID: ${GID}
+    ports:
+      - 445:445
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+      - samba:/storage
+    restart: always
+    restart: unless-stopped
+    labels:
+      com.getarcaneapp.arcane.icon: https://raw.githubusercontent.com/dockur/samba/master/.github/logo.png
+volumes:
+  samba:
+    name: smb-volume

@@ -1,0 +1,32 @@
+x-arcane:
+  icon: https://github.com/dockur/macos/raw/master/.github/logo.png
+  urls:
+    - https://wikipedia.org/wiki/MacOS
+services:
+  macos:
+    image: dockurr/macos
+    container_name: macos
+    environment:
+      VERSION: "15"
+      # Default Disk size is 64Gb
+      #DISK_SIZE: "256G"
+
+    devices:
+      - /dev/kvm
+      - /dev/net/tun
+    cap_add:
+      - NET_ADMIN
+    ports:
+      - 8006:8006
+      - 5900:5900/tcp
+      - 5900:5900/udp
+    volumes:
+      - macos:/storage
+    restart: always
+    stop_grace_period: 2m
+    restart: unless-stopped
+    labels:
+      com.getarcaneapp.arcane.icon: https://github.com/dockur/macos/raw/master/.github/logo.png
+volumes:
+  macos:
+    name: macos-volume
