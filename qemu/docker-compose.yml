@@ -1,0 +1,26 @@
+x-arcane:
+  icon: https://cdn.jsdelivr.net/gh/selfhst/icons@main/svg/qemu.svg
+  urls:
+    - https://www.qemu.org
+services:
+  qemu:
+    image: qemux/qemu
+    container_name: qemu
+    environment:
+      BOOT: ${OS}
+    devices:
+      - /dev/kvm
+      - /dev/net/tun
+    cap_add:
+      - NET_ADMIN
+    ports:
+      - 8006:8006
+    volumes:
+      - qemu:/storage
+    stop_grace_period: 2m
+    restart: unless-stopped
+    labels:
+      com.getarcaneapp.arcane.icon: https://cdn.jsdelivr.net/gh/selfhst/icons@main/svg/qemu.svg
+volumes:
+  qemu:
+    name: qemu-volume
