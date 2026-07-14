@@ -1,0 +1,34 @@
+x-arcane:
+  icon: https://cdn.jsdelivr.net/gh/selfhst/icons@main/svg/vscodium.svg
+  urls:
+    - https://vscodium.com
+services:
+  vscodium:
+    image: lscr.io/linuxserver/vscodium:latest
+    container_name: vscodium
+    cap_add:
+      - IPC_LOCK
+    user: ${UID}:${GID}
+    environment:
+      - TZ=${TIMEZONE}
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+      - vscodium:/config
+    ports:
+      - 23000:3000
+      - 23001:3001
+    shm_size: "1gb"
+    restart: unless-stopped
+    labels:
+      com.getarcaneapp.arcane.icon: https://cdn.jsdelivr.net/gh/selfhst/icons@main/svg/vscodium.svg
+volumes:
+  vscodium:
+    name: vscodium
+# If you want to store files in a smb network share uncomment the following lines
+#    driver: local
+#    driver_opts:
+#      type: cifs
+#      device: "//${SMBSRV}/${SMBSHARE}"
+#      o: "username=${MNTUSER},password=${MNTPWD},ro,vers=3.1.1,file_mode=0755,dir_mode=0755,iocharset=utf8"
+
+    
