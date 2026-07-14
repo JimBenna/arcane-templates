@@ -120,7 +120,7 @@
       "id": "JB-DockurSmbServer-Container",
       "name": "samba",
       "description": "samba server in a container.",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "author": "Jim BENNA",
       "compose_url": "https://raw.githubusercontent.com/JimBenna/arcane-templates/main/samba/docker-compose.yml",
       "env_url": "https://raw.githubusercontent.com/JimBenna/arcane-templates/main/samba/.env.example",
@@ -131,12 +131,12 @@
       "id": "JB-DockurMacOs-Container",
       "name": "macos",
       "description": "macos in a container.",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "author": "Jim BENNA",
       "compose_url": "https://raw.githubusercontent.com/JimBenna/arcane-templates/main/macos/docker-compose.yml",
       "env_url": "https://raw.githubusercontent.com/JimBenna/arcane-templates/main/macos/.env.example",
       "documentation_url": "https://hub.docker.com/r/dockurr/macos",
-      "tags": ["IT", "Dev"]
+      "tags": ["IT", "OS"]
     },          
     {
       "id": "JB-Forgejo-and-Postgresql",
