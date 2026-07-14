@@ -1,24 +1,3 @@
-
-services:
-  proxmox:
-    hostname: pve
-    image: dockurr/proxmox
-    container_name: proxmox
-    privileged: true
-    environment:
-      PASSWORD: ${ROOTPWD}
-    ports:
-      - 8006:8006
-    volumes:
-      - proxmoxve:/var/lib/vz
-      - config:/var/lib/pve-cluster
-
-volumes:
-  proxmoxve:
-    name: proxmox-volume
-  config:
-    name: proxmox-config
-
 # =============================================================================
 # World Monitor — Docker / Podman Compose
 # =============================================================================
