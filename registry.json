@@ -41,7 +41,7 @@
     },
     {
       "id": "JB-Chromium-Headless",
-      "name": "Chromium in a Container",
+      "name": "Chromium headless.",
       "description": "Chromium without Human interaction",
       "version": "89",
       "author": "Chromium Team",
@@ -53,8 +53,8 @@
     
     {
       "id": "JB-Ollama-WebUI",
-      "name": "Ollama and OpenWebUI in the same container",
-      "description": "This template enables an easy deployment of ollama and OpenWebUI",
+      "name": "Ollama & OpenWebUI.",
+      "description": "Deployment of ollama and OpenWebUI containers.",
       "version": "0.1.0",
       "author": "Jim BENNA",
       "compose_url": "https://raw.githubusercontent.com/JimBenna/arcane-templates/main/ollama/docker-compose.yml",
@@ -64,7 +64,7 @@
     }, 
     {
       "id": "JB-MySpeed-Container",
-      "name": "MySpeed",
+      "name": "MySpeed.",
       "description": "MySpeed selfhosted bandwidth measurment tool",
       "version": "0.1.0",
       "author": "Jim BENNA",
@@ -97,7 +97,7 @@
     },
     {
       "id": "JB-IT-tools-Container",
-      "name": "IT Tools",
+      "name": "IT Tools.",
       "description": "Some IT useful tools selfhosted in a container ",
       "version": "0.1.0",
       "author": "Jim BENNA",
@@ -108,7 +108,7 @@
     },
     {
       "id": "JB-VSCodiumWeb-Container",
-      "name": "VS Codium Web",
+      "name": "VS Codium Web.",
       "description": "VsCodium in a browser.",
       "version": "0.1.0",
       "author": "Jim BENNA",
@@ -119,18 +119,18 @@
     },
     {
       "id": "JB-DockurSmbServer-Container",
-      "name": "samba",
+      "name": "samba.",
       "description": "samba server in a container.",
       "version": "0.1.1",
       "author": "Jim BENNA",
       "compose_url": "https://raw.githubusercontent.com/JimBenna/arcane-templates/main/samba/docker-compose.yml",
       "env_url": "https://raw.githubusercontent.com/JimBenna/arcane-templates/main/samba/.env.example",
       "documentation_url": "https://hub.docker.com/r/dockurr/samba",
-      "tags": ["IT"]
+      "tags": ["IT", "server"]
     },
     {
       "id": "JB-DockurMacOs-Container",
-      "name": "macos",
+      "name": "macos.",
       "description": "macos in a container.",
       "version": "0.1.1",
       "author": "Jim BENNA",
@@ -141,7 +141,7 @@
     },
     {
       "id": "JB-DockurWindows-Container",
-      "name": "Windows",
+      "name": "Windows.",
       "description": "windows workstation in a container.",
       "version": "0.1.0",
       "author": "Jim BENNA",
@@ -152,7 +152,7 @@
     },
     {
       "id": "JB-ChromeOSs-Container",
-      "name": "ChromeOS",
+      "name": "ChromeOS.",
       "description": "ChromeOS in a container.",
       "version": "0.1.0",
       "author": "Jim BENNA",
@@ -163,7 +163,7 @@
     },  
     {
       "id": "JB-QEMU-Container",
-      "name": "Qemu",
+      "name": "Qemu.",
       "description": "Qemu in a container to launch linux distros.",
       "version": "0.1.0",
       "author": "Jim BENNA",
@@ -171,10 +171,32 @@
       "env_url": "https://raw.githubusercontent.com/JimBenna/arcane-templates/main/qemu/.env.example",
       "documentation_url": "https://github.com/qemus",
       "tags": ["IT", "OS"]
-    },                  
+    },
+    {
+      "id": "JB-FileStash-Container",
+      "name": "FileStash.",
+      "description": "A FileBrowser in a Docker container.",
+      "version": "0.1.0",
+      "author": "Jim BENNA",
+      "compose_url": "https://raw.githubusercontent.com/JimBenna/arcane-templates/main/filestash/docker-compose.yml",
+      "env_url": "https://raw.githubusercontent.com/JimBenna/arcane-templates/main/filestash/.env.example",
+      "documentation_url": "https://www.filestash.app/docs/",
+      "tags": ["IT", "Server"]
+    }, 
+    {
+      "id": "JB-ProxMoxVe-Container",
+      "name": "Proxmox VE.",
+      "description": "Proxmox VE in a Docker container.",
+      "version": "0.1.0",
+      "author": "Jim BENNA",
+      "compose_url": "https://raw.githubusercontent.com/JimBenna/arcane-templates/main/proxmoxve/docker-compose.yml",
+      "env_url": "https://raw.githubusercontent.com/JimBenna/arcane-templates/main/proxmoxve/.env.example",
+      "documentation_url": "https://pve.proxmox.com/pve-docs/",
+      "tags": ["IT", "Server"]
+    },                    
     {
       "id": "JB-Forgejo-and-Postgresql",
-      "name": "Forgejo, Forgejo Runner and Docker-in-Docker",
+      "name": "Forgejo its database, Forgejo Runner and Docker-in-Docker.",
       "description": "A Selfhosted GIT server",
       "version": "1.0.0",
       "author": "Jim BENNA",
