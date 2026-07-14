@@ -13,5 +13,5 @@
   - Mac Addresses lookup
   
   And many more.
-  Thanks a lot to [Corentin Thomasset] (https://corentin.tech/) for writing that tool and enables us to seflhost it.
+  Thanks a lot to [Corentin Thomasset](https://corentin.tech/) for writing that tool and enables us to seflhost it.
   Of course it can also be accessed directly on the web  ➡️  [IT-TOOLS on the web](https://it-tools.tech/)
